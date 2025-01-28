@@ -21,10 +21,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Domain Creation
+- OU Creation
+- Client DNS
+- Remote Desktop
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -40,17 +40,31 @@ To create the Domain for active directory, first start by using <b/>Server Manag
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/1976e8d4-e8f7-44a0-8d8d-75eeb6c1f5ef)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+With windows start, open <b/> Active Directory Users and Computers</b> and create 2 OUs (Organizational Unit) labeled as _EMPLOYEES and _ADMINS. Create your admin username and password for log in. After this is done you must select the account properties and under <b/>Select Groups</b> add your account to <b/>domain admins</b>. This will make a new log in for the account that you made. The new account will be mydomain.com\<b/>username</b>.  
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/4c4955fa-acf2-4f40-a55a-9a7bf9c205d5)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next you can add client computers to the domain within the cloud (Azure). This is done by setting the client's <b/>DNS</b> server settings as the domain controller's private ip adress. This allows any Dns questions asked sent to the domain instead of the virtual network. Doing this will make a connection to the domain conroller accsessable. 
+</p>
+<br />
+<p>
+  
+![image](https://github.com/user-attachments/assets/59273899-6c23-4776-99ed-95740bd8dd9c)
+
+
+</p>
+<p>
+Now you can log in to client computer usuing the domain controller account that you previosly made. Once you log in go to computer settings and find the remote desktop settings. Once you are there, select user accounts and the domain should show up. Here you can add access to the client. You can choose who has access by selecting domain admins or domain users. This will allow accounts created inside of the domain users group to use this client for log in. This proccess can be repeated for however many clients need to ber created. 
 </p>
 <br />
