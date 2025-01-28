@@ -29,7 +29,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![image](https://github.com/user-attachments/assets/fe5d9b49-7d98-42eb-b3eb-8b344c000da5)
+
+
 </p>
 <p>
 To create the Domain for active directory, first start by using <b/>Server Manager</b> as an admin and configure a local server. Continue through the install steps and install <b/>Active Directory Domain Systems</b>, you will click the flag in the top right section of the screen and add a new forest labeled as mydomain.com. After you install everything, the domain will restart and will require you to log in again. When logging in you will have to sign in with a new domain login, since we used mydomain.com we will sign in as mydomain\<b/>username</b>. The passowrd used for the account will still be the same but the username log in will be different depending on how you want to log in. Doing this makes it so domain admins will have a different log in than the other agent users.
