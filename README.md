@@ -79,6 +79,6 @@ You can now open powershell and attempt to ping the <b/>Domain Controller</b>, i
 
 </p>
 <p>
-Now you can log in to client computer usuing the domain controller account that you previosly made. Once you log in go to computer settings and find the remote desktop settings. Once you are there, select user accounts and the domain should show up. Here you can add access to the client. You can choose who has access by selecting domain admins or domain users. This will allow accounts created inside of the domain users group to use this client for log in. This proccess can be repeated for however many clients need to ber created. 
+Now you can log in to client computer usuing the domain controller account that you previosly made. Once you log in go to computer settings and find the remote desktop settings. Once you are there, select user accounts and the domain should show up. Here you can add access to the client. You can choose who has access by selecting domain admins or domain users. This will allow accounts created inside of the domain users group to use this client for log in. This proccess can be repeated for however many clients need to be created. 
 </p>
 <br />
