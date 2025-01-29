@@ -39,6 +39,7 @@ To create the Domain for active directory, first start by using <b/>Server Manag
 </p>
 <br />
 
+
 <p>
   
 ![image](https://github.com/user-attachments/assets/1976e8d4-e8f7-44a0-8d8d-75eeb6c1f5ef)
@@ -58,6 +59,19 @@ With windows start, open <b/> Active Directory Users and Computers</b> and creat
 Next you can add client computers to the domain within the cloud (Azure). This is done by setting the client's <b/>DNS</b> server settings as the domain controller's private ip adress. This allows any Dns questions asked sent to the domain instead of the virtual network. Doing this will make a connection to the domain conroller accsessable. 
 </p>
 <br />
+
+
+
+<p> 
+  
+![image](https://github.com/user-attachments/assets/01cb5be8-aee0-42e4-a524-166755cdbd1d)
+
+
+
+</p>
+<p> 
+You can now open powershell and attempt to ping the <b/>Domain Controller</b>, if the ping was successful you can also type ipconfig /all. This will show the location that the DNS will be sent to and it will show the primary DNS suffix. Now you should see that the DNS server should show the private ip address of the Domain Controller.  </p>
+
 <p>
   
 ![image](https://github.com/user-attachments/assets/59273899-6c23-4776-99ed-95740bd8dd9c)
